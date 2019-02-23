@@ -46,6 +46,10 @@
                 </div>
                 <div class="field">
                   <a class = "button is-danger is-rounded" href="template.csv">Download Sleep time CSV Forms</a>
+                </div>                
+                <div class="control">
+                  <label class="label"> ** Input should be in 24 Hour!**
+                  <br>[0-24 hours]</p><br>
                 </div>
 
               </div>
@@ -150,7 +154,7 @@
                                       $temp = $i;
                                       $Start_Sleep_Time = $array[$temp];
                                       $Finish_Sleep_Time = $array[$temp+1];
-                                      if($Start_Sleep_Time<$Finish_Sleep_Time){
+                                      if($Start_Sleep_Time>$Finish_Sleep_Time){
                                         $sleepTime = intval($Start_Sleep_Time)-intval($Finish_Sleep_Time);
                                       }
                                       if($Finish_Sleep_Time>=$Start_Sleep_Time){
@@ -247,6 +251,7 @@
 
                             <!-- CSVFile -->
                             <label class="label">CSV File</label>
+                            
                             <div class="level-left">
                             <div class="field">
                               <div class="file is-primary has-name">
@@ -259,6 +264,7 @@
                                     <span class="file-label">
                                       CSV file…
                                     </span>
+                                    
                                   </span>
                                   <span class="file-name" id="csvfilename">
                                     No file chosen

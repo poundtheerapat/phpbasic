@@ -154,9 +154,12 @@
                                       $temp = $i;
                                       $Start_Sleep_Time = $array[$temp];
                                       $Finish_Sleep_Time = $array[$temp+1];
+                
+                                      //case
                                       if($Start_Sleep_Time>$Finish_Sleep_Time){
-                                        $sleepTime = intval($Start_Sleep_Time)-intval($Finish_Sleep_Time);
+                                        $sleepTime = (24-intval($Start_Sleep_Time))+intval($Finish_Sleep_Time);
                                       }
+                                      //case 
                                       if($Finish_Sleep_Time>=$Start_Sleep_Time){
                                         $sleepTime = intval($Finish_Sleep_Time)-intval($Start_Sleep_Time);
                                       }

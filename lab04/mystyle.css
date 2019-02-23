@@ -1,0 +1,9 @@
+section.hero{
+    background-image:  linear-gradient(to top left, teal, aqua);
+}
+input.input{
+    width: 55%;
+}
+span.error, h5.subtitle{
+    color: red;
+}
